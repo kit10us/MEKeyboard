@@ -57,7 +57,7 @@ namespace mekeyboard
 		CComPtr< IDirectInput > m_pdi;
 		CComPtr< IDirectInputDevice > m_pdiKeyboard;
 
-		std::map< std::string, size_t, unify::CaseInsensitiveLessThanTest > m_nameToIndex;
+		std::map< std::string, size_t, unify::string::CaseInsensitiveLessThanTest > m_nameToIndex;
 
 		unsigned char				m_diKeyState[256];
 
