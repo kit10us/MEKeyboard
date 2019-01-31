@@ -391,9 +391,9 @@ std::string Keyboard::GetName() const
 
 void Keyboard::Acquire()
 {
-	auto parameters = m_game->GetOSParameters();
-	HWND handle = (HWND)parameters.hWnd;
-	HINSTANCE hInstance = (HINSTANCE)parameters.hInstance;
+	const auto parameters = m_game->GetOS()->GetOSParameters();
+	HWND handle = (HWND)parameters->hWnd;
+	HINSTANCE hInstance = (HINSTANCE)parameters->hInstance;
 
 	// Create the Direct Input device...
 	if ( ! m_pdi )
